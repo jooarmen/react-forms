@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Simple CSS styling */
+label{
+  padding: 5px;
+  font-size: 15px;
+}
+
+h2{
+  padding-top: 80px;
+  font-size: 25px;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}

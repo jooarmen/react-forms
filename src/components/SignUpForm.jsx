@@ -12,6 +12,14 @@ export default function SignUpForm({setToken}){
     async function handleSubmit(e){
         e.preventDefault()
         //console.log("it works")
+
+        if (username.length < 8) {
+            setError("Username must be greater than or equal to eight characters.");
+            return;
+        }
+
+            setError(null)
+
         try {
           const response =  await fetch("https://fsa-jwt-practice.herokuapp.com/signup",{
 
@@ -37,10 +45,10 @@ export default function SignUpForm({setToken}){
     { error && <p>{error}</p>}
     <form onSubmit={handleSubmit}>
         <label>
-            Username: <input type="username" value={username} onChange={(e)=>setUsername(e.target.value)} />
+            Username <input type="username" value={username} onChange={(e)=>setUsername(e.target.value)} />
         </label>
         <label>
-            Password: <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+            Password <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
         </label>
 
         <button>Submit</button>
