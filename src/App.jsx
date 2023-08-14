@@ -1,14 +1,14 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 import './App.css'
+import SignUpForm from './components/SignUpForm'
+import Authenitcate from './components/Authenitcate'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-       
-      </div>
+       <SignUpForm />
+       <Authenitcate />
       
     </>
   )
